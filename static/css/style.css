@@ -427,9 +427,9 @@ nav ul li a:hover::after {
 }
 
 /* Testimonials */
-.testimonials {
+/* .testimonials {
     background-color: var(--light-bg);
-}
+} */
 
 .testimonials-slider {
     display: grid;
