@@ -427,10 +427,6 @@ nav ul li a:hover::after {
 }
 
 /* Testimonials */
-/* .testimonials {
-    background-color: var(--light-bg);
-} */
-
 .testimonials-slider {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -506,6 +502,33 @@ nav ul li a:hover::after {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+}
+
+/* Sección de Descarga y Login */
+/* Contenedor para los botones de descarga y el login en línea */
+.download-and-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Estilo para el bloque de login (solo para escritorio) */
+.desktop-login {
+    max-width: 300px;
+    margin-left: 20px;
+}
+
+/* Ocultar el login en dispositivos móviles */
+@media (max-width: 768px) {
+    .desktop-login {
+        display: none;
+    }
+    /* Opcional: centrar elementos en móvil */
+    .download-and-login {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* Contact Section */
@@ -708,74 +731,6 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-    
-    nav {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: var(--white);
-        box-shadow: var(--shadow);
-        padding: 20px;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: var(--transition);
-    }
-    
-    nav.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 0 0 15px;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .pricing-card.featured {
-        transform: scale(1);
-    }
-    
-    .testimonials-slider {
-        grid-template-columns: 1fr;
-    }
-    
-    .download-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-legal {
-        margin-top: 15px;
-    }
-}
-
 @media screen and (max-width: 576px) {
     .section-title {
         font-size: 2rem;
@@ -794,6 +749,7 @@ footer {
         gap: 10px;
     }
 }
+
 /* Integration Section */
 .integration-section {
     background-color: var(--light-bg);
@@ -848,50 +804,6 @@ footer {
     text-align: center;
 }
 
-/* Features Advanced Section */
-.features-advanced {
-    background-color: var(--white);
-    padding: 80px 0;
-}
-
-.features-advanced-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-}
-
-.feature-block {
-    padding: 30px;
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.feature-block:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.feature-block h3 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 1.3rem;
-}
-
-.feature-block h3 i {
-    color: var(--primary-color);
-    margin-right: 10px;
-    font-size: 1.5rem;
-}
-
-.feature-block p {
-    color: var(--light-text);
-    line-height: 1.6;
-}
-
-/* Responsive adjustments for new sections */
 @media screen and (max-width: 992px) {
     .integration-cta {
         margin-top: 30px;

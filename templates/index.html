@@ -229,15 +229,35 @@
 
     <section class="download-cta">
         <div class="container">
-            <h2>¿Listo para empezar?</h2>
-            <p>Descarga AppMaster hoy mismo y lleva tu productividad al siguiente nivel.</p>
-            <p>Descargate la app de movil para usuarios y la de escritorio como administrador.</p>
+          <h2>¿Listo para empezar?</h2>
+          <p>Descarga AppMaster hoy mismo y lleva tu productividad al siguiente nivel.</p>
+          <p>Descárgate la app de móvil para usuarios y la de escritorio como administrador.</p>
+          <div class="download-and-login">
             <div class="download-buttons">
-                <a href="#" class="btn btn-primary btn-large"><i class="fas fa-mobile-alt"></i> Movil</a>
-                <a href="/login" class="btn btn-primary btn-large"><i class="fas fa-desktop"></i> Escritorio</a>
+              <a href="#" class="btn btn-primary btn-large">
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i> Móvil
+              </a>
             </div>
+            <div class="desktop-login">
+              <form action="/login" method="post">
+                <div class="form-group">
+                  <label for="username">Usuario</label>
+                  <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                </div>
+                <button type="submit" class="btn btn-large">
+                  <i class="fas fa-desktop" aria-hidden="true"></i> Escritorio
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+    
 
     <section class="features-advanced">
         <div class="container">
