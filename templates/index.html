@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppMaster - Tu solución inteligente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>App<span>Master</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Revoluciona tu productividad</h2>
+                <p>AppMaster es la herramienta definitiva para optimizar tus flujos de trabajo y maximizar tu eficiencia diaria.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Descargar ahora</a>
+                    <a href="#caracteristicas" class="btn btn-secondary">Conoce más</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="AppMaster en dispositivos" onerror="this.src='/api/placeholder/500/300'; this.alt='Mockup de la aplicación'">
+            </div>
+        </div>
+    </section>
+
+    <section id="caracteristicas" class="features">
+        <div class="container">
+            <h2 class="section-title">Características destacadas</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Rendimiento Ultrarrápido</h3>
+                    <p>Experimenta velocidades sin precedentes con nuestra tecnología de procesamiento optimizada.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Seguridad Avanzada</h3>
+                    <p>Protección de datos de nivel empresarial con encriptación de extremo a extremo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Sincronización Perfecta</h3>
+                    <p>Mantén tus datos actualizados en todos tus dispositivos con sincronización en tiempo real.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Personalización Total</h3>
+                    <p>Adapta la interfaz a tus necesidades con nuestras opciones de personalización completas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="app-showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <h2>Diseñada para la experiencia moderna</h2>
+                <p>Nuestra interfaz intuitiva y elegante te permite acceder a todas las funciones sin complicaciones.</p>
+                <ul class="showcase-list">
+                    <li><i class="fas fa-check"></i> Panel de control personalizable</li>
+                    <li><i class="fas fa-check"></i> Analíticas en tiempo real</li>
+                    <li><i class="fas fa-check"></i> Integración con tus herramientas favoritas</li>
+                    <li><i class="fas fa-check"></i> Soporte multiplataforma</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Probar versión demo</a>
+            </div>
+            <div class="showcase-image">
+                <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Captura de pantalla de AppMaster" onerror="this.src='/api/placeholder/480/360'; this.alt='Captura de la aplicación'">
+            </div>
+        </div>
+    </section>
+
+    <section id="precios" class="pricing">
+        <div class="container">
+            <h2 class="section-title">Planes y precios</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Básico</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">9</span>
+                            <span class="period">/mes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Funciones básicas</li>
+                            <li>1 dispositivo</li>
+                            <li>Soporte por email</li>
+                            <li>Actualizaciones mensuales</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-outline">Seleccionar plan</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3>Profesional</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">19</span>
+                            <span class="period">/mes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Todas las funciones básicas</li>
+                            <li>5 dispositivos</li>
+                            <li>Soporte prioritario</li>
+                            <li>Actualizaciones semanales</li>
+                            <li>Automatizaciones avanzadas</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-primary">Seleccionar plan</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Empresarial</h3>
+                        <div class="price">
+                            <span class="currency">€</span>
+                            <span class="amount">49</span>
+                            <span class="period">/mes</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li>Todas las funciones profesionales</li>
+                            <li>Dispositivos ilimitados</li>
+                            <li>Soporte 24/7</li>
+                            <li>Actualizaciones diarias</li>
+                            <li>Integraciones personalizadas</li>
+                            <li>Onboarding avanzado</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-outline">Seleccionar plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"AppMaster ha transformado completamente mi flujo de trabajo. Ahora puedo completar en minutos lo que antes me llevaba horas."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Usuario 1" onerror="this.src='/api/placeholder/60/60'; this.alt='Usuario'">
+                        <div class="author-info">
+                            <h4>María Rodríguez</h4>
+                            <p>Diseñadora Freelance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"La mejor inversión que he hecho para mi negocio. El soporte al cliente es excepcional y las actualizaciones constantes mejoran la aplicación cada semana."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Usuario 2" onerror="this.src='/api/placeholder/60/60'; this.alt='Usuario'">
+                        <div class="author-info">
+                            <h4>Carlos Vega</h4>
+                            <p>Emprendedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="integration-section">
+        <div class="container">
+            <h2 class="section-title">Integraciones avanzadas</h2>
+            <p class="section-description">AppMaster se conecta perfectamente con tus herramientas favoritas para crear flujos de trabajo automáticos.</p>
+            
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Calendarios</h3>
+                    <p>Sincroniza eventos y recordatorios con tus calendarios favoritos.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Almacenamiento en la nube</h3>
+                    <p>Accede y organiza archivos de diferentes servicios en la nube desde una sola interfaz.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestores de tareas</h3>
+                    <p>Conecta con Trello, Asana y otros para centralizar la gestión de proyectos.</p>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Comunicación</h3>
+                    <p>Integración con plataformas de mensajería y correo electrónico.</p>
+                </div>
+            </div>
+
+            <div class="integration-cta">
+                <a href="#" class="btn btn-secondary">Ver todas las integraciones</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="download-cta">
+        <div class="container">
+            <h2>¿Listo para empezar?</h2>
+            <p>Descarga AppMaster hoy mismo y lleva tu productividad al siguiente nivel.</p>
+            <div class="download-buttons">
+                <a href="#" class="btn btn-primary btn-large"><i class="fab fa-apple"></i> App Store</a>
+                <a href="#" class="btn btn-primary btn-large"><i class="fab fa-google-play"></i> Google Play</a>
+                <a href="#" class="btn btn-primary btn-large"><i class="fas fa-desktop"></i> Escritorio</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-advanced">
+        <div class="container">
+            <h2 class="section-title">Funcionalidades avanzadas</h2>
+            <div class="features-advanced-grid">
+                <div class="feature-block">
+                    <h3><i class="fas fa-robot"></i> Automatización inteligente</h3>
+                    <p>Crea flujos de trabajo automatizados con nuestro motor de reglas que aprende de tus hábitos. Define condiciones personalizadas y acciones para tareas repetitivas.</p>
+                </div>
+                <div class="feature-block">
+                    <h3><i class="fas fa-chart-line"></i> Análisis predictivo</h3>
+                    <p>Aprovecha algoritmos avanzados para predecir tendencias y comportamientos basados en tus datos históricos. Toma decisiones informadas con visualizaciones claras.</p>
+                </div>
+                <div class="feature-block">
+                    <h3><i class="fas fa-language"></i> Procesamiento de lenguaje natural</h3>
+                    <p>Interactúa con la aplicación mediante comandos de voz o texto en lenguaje natural. Extrae datos importantes de documentos complejos automáticamente.</p>
+                </div>
+                <div class="feature-block">
+                    <h3><i class="fas fa-brain"></i> Recomendaciones personalizadas</h3>
+                    <p>Recibe sugerencias adaptadas a tus necesidades específicas. Nuestro sistema aprende de tus preferencias para ofrecerte la información más relevante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Ponte en contacto</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Calle Innovación 123, Madrid, España</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+34 912 345 678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@appmaster.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>App<span>Master</span></h3>
+                    <p>Tu solución inteligente para la productividad diaria.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Producto</h4>
+                        <ul>
+                            <li><a href="#">Características</a></li>
+                            <li><a href="#">Precios</a></li>
+                            <li><a href="#">Descargas</a></li>
+                            <li><a href="#">Actualizaciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#">Sobre nosotros</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Empleos</a></li>
+                            <li><a href="#">Prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="#">Ayuda</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Comunidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AppMaster. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos de servicio</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú móvil
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+            
+            // Botones de descarga (no funcionales como solicitaste)
+            const downloadButtons = document.querySelectorAll('.btn-primary');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Botón de descarga clickeado - No funcional por diseño');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
