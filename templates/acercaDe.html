@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymRace - Acerca de nosotros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleAcercaDe.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/"><h1>Gym<span>Race</span></h1></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <!-- <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#download">Descargar</a></li>
+                    <li><a href="#contacto">Contacto</a></li> -->
+                    <li><a href="#" class="active">Acerca de</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h2>Acerca de Nosotros</h2>
+                <p>En GymRace, creemos que el fitness es más que solo entrenamiento: es una forma de vida. Nuestra plataforma nació con el objetivo de revolucionar la manera en que las personas alcanzan sus metas deportivas, combinando tecnología, motivación y comunidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-mission">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Transformar la experiencia de entrenamiento mediante tecnología inteligente, haciendo que cada sesión sea más efectiva, personalizada y motivadora para todos los niveles de fitness.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Convertirnos en la aplicación de referencia global en el sector fitness, creando una comunidad activa donde millones de personas alcancen sus objetivos deportivos con herramientas tecnológicas avanzadas.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Nuestros Valores</h3>
+                    <p>Nos guiamos por la innovación constante, el compromiso con la excelencia, la inclusividad para todos los niveles, y la pasión por ayudar a las personas a alcanzar su mejor versión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-story">
+        <div class="container">
+            <div class="about-story-grid">
+                <div class="story-content">
+                    <h2>El origen de GymRace</h2>
+                    <p>GymRace nació en 2021 cuando un grupo de desarrolladores y entrenadores personales identificaron una necesidad clara en el mercado: una aplicación que realmente entendiera las necesidades individuales de cada atleta.</p>
+                    <p>Tras meses de investigación y desarrollo, lanzamos la primera versión de GymRace con funcionalidades básicas de seguimiento. La respuesta fue abrumadora, y desde entonces hemos crecido hasta convertirnos en una plataforma integral para el fitness con más de 100,000 usuarios activos.</p>
+                    <p>Nuestro enfoque en la personalización y la experiencia del usuario nos ha permitido desarrollar una aplicación que realmente hace la diferencia en la vida de nuestros usuarios, ayudándoles a alcanzar sus metas fitness de manera efectiva y sostenible.</p>
+                </div>
+                <div class="story-image">
+                    <img src="{{ url_for('static', filename='img/aplicacion.png') }}" alt="Historia de GymRace" onerror="this.src='/api/placeholder/480/360'; this.alt='Historia de GymRace'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">El Creador</h2>
+            <p class="section-description">Conoce a la mente detrás de esta aplicación de fitness y tecnología.</p>
+            
+            <div class="team-grid" style="grid-template-columns: 1fr;">
+                <div class="team-member" style="max-width: 500px; margin: 0 auto;">
+                    <div class="member-image">
+                        <img src="{{ url_for('static', filename='img/yo.png') }}" alt="Creador" onerror="this.src='/api/placeholder/200/200'; this.alt='Creador'">
+                    </div>
+                    <h3>Javier Rodríguez Jiménez</h3>
+                    <p class="member-role">Fundador & Desarrollador</p>
+                    <p class="member-bio">Apasionado por la tecnología y el fitness, he creado esta aplicación para ayudar a las personas a alcanzar sus objetivos de forma más efectiva y personalizada.</p>
+                    <div class="member-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://github.com/Javiiiii11"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Logros</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-number">100,000+</div>
+                    <div class="achievement-text">Usuarios activos</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <div class="achievement-number">500+</div>
+                    <div class="achievement-text">Ejercicios disponibles</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="achievement-number">15+</div>
+                    <div class="achievement-text">Premios de innovación</div>
+                </div>
+                
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="achievement-number">25+</div>
+                    <div class="achievement-text">Países con usuarios</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Colaboradores</h2>
+            <p class="section-description">Trabajamos con los mejores para ofrecerte una experiencia fitness insuperable.</p>
+            
+            <div class="partners-grid">
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 1" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 2" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 3" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 4" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 5" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+                <div class="partner-logo">
+                    <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Colaborador 6" onerror="this.src='/api/placeholder/160/80'; this.alt='Logo colaborador'">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="cta-about">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para unirte a la comunidad GymRace?</h2>
+                <p>Descarga la aplicación hoy y comienza tu transformación fitness con herramientas de vanguardia.</p>
+                <div class="cta-buttons">
+                    <a href="#download" class="btn btn-primary">Descargar ahora</a>
+                    <a href="#contacto" class="btn btn-secondary">Contactar con nosotros</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="/"><h3>Gym<span>Race</span></h3></a>
+                    <p>Tu compañero ideal para entrenamientos inteligentes.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Producto</h4>
+                        <ul>
+                            <li><a href="#caracteristicas">Características</a></li>
+                            <li><a href="#download-cta">Descargas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#">Sobre nosotros</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Carreras</a></li>
+                            <li><a href="#">Prensa</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="#">Ayuda</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Comunidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 GymRace. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos de servicio</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú móvil
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav');
+            
+            menuToggle.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -27,6 +27,11 @@ def auth():
         return redirect(url_for('admin_dashboard'))
     else:
         return render_template('login.html', error=True)
+    
+    
+@app.route('/acercaDe')
+def acerca_de():
+    return render_template('acercaDe.html')
 
 @app.route('/admin/dashboard')
 def admin_dashboard():

@@ -11,15 +11,15 @@
     <header>
         <div class="container header-container">
             <div class="logo">
-                <h1>Gym<span>Race</span></h1>
+                <a href="/"><h1>Gym<span>Race</span></h1></a>
             </div>
             <nav>
                 <ul>
                     <li><a href="/">Inicio</a></li>
                     <li><a href="#caracteristicas">Características</a></li>
-                    <li><a href="#precios">Precios</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#download">Descargar</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="/acercaDe">Acerca de</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle">
@@ -28,19 +28,19 @@
         </div>
     </header>
 
-    <section class="hero">
+    <section id="inicio"  class="hero">
         <div class="container">
             <div class="hero-content">
                 <h2>Revoluciona tu productividad</h2>
                 <p>GymRace es la App definitiva para optimizar tus ejercicios y maximizar tu eficiencia diaria.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary">Descargar ahora</a>
+                    <a href="#download" class="btn btn-primary">Descargar ahora</a>
                     <a href="#caracteristicas" class="btn btn-secondary">Conoce más</a>
                 </div>
             </div>
             <!-- imagen inicio -->
             <div class="hero-image">
-                <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="AppMaster en dispositivos" onerror="this.src='/api/placeholder/500/300'; this.alt='Mockup de la aplicación'">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="AppMaster en dispositivos" onerror="this.src='/api/placeholder/500/300'; this.alt='Mockup de la aplicación'">
             </div>
         </div>
     </section>
@@ -51,10 +51,10 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-stopwatch"></i>
+                        <i class="fas fa-apple-alt"></i>
                     </div>
-                    <h3>Seguimiento en Tiempo Real</h3>
-                    <p>Monitorea tu rendimiento y progreso con estadísticas detalladas de cada entrenamiento.</p>
+                    <h3>Variedad de dietas</h3>
+                    <p>Encuentra planes de alimentación personalizados según tus objetivos, ya sea ganar músculo, perder peso o mejorar tu rendimiento.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -89,6 +89,7 @@
                 <p>GymRace te ofrece una interfaz intuitiva y poderosa para que te concentres en lo que realmente importa: tu entrenamiento.</p>
                 <ul class="showcase-list">
                     <li><i class="fas fa-check"></i> +500 ejercicios disponibles</li>
+                    <li><i class="fas fa-check"></i> Gran variedad de dietas diferentes.</li>
                     <li><i class="fas fa-check"></i> Crea Rutinas totalmente personalizadas</li>
                     <li><i class="fas fa-check"></i> Rutinas preestablecidas por atletas profesionales</li>
                     <li><i class="fas fa-check"></i> Disponible en todos tus android</li>
@@ -96,7 +97,7 @@
                 <a href="#" class="btn btn-primary">Probar ahora</a>
             </div>
             <div class="showcase-image">
-                <img src="{{ url_for('static', filename='img/image.jpg') }}" alt="Captura de pantalla de GymRace" onerror="this.src='/api/placeholder/480/360'; this.alt='Vista previa de GymRace'">
+                <img src="{{ url_for('static', filename='img/aplicacion.png') }}" alt="Captura de pantalla de GymRace" onerror="this.src='/api/placeholder/480/360'; this.alt='Vista previa de GymRace'">
             </div>
         </div>
     </section>
@@ -213,11 +214,11 @@
                 </div>
                 <div class="integration-card">
                     <div class="integration-icon">
-                        <i class="fas fa-utensils"></i>
+                        <i class="fas fa-seedling"></i>
                     </div>
-                    <h3>Seguimiento Nutricional</h3>
-                    <p>Integra MyFitnessPal y otras apps de dieta para mejorar tu rendimiento.</p>
-                </div>
+                    <h3>Planes de Alimentación</h3>
+                    <p>Explora diferentes dietas adaptadas a tus objetivos, desde aumento de masa muscular hasta pérdida de peso.</p>
+                </div>                
             </div>
     
             <div class="integration-cta">
@@ -227,35 +228,50 @@
     </section>
     
 
-    <section class="download-cta">
+    <section id="download" class="download-cta">
         <div class="container">
-          <h2>¿Listo para empezar?</h2>
-          <p>Descarga AppMaster hoy mismo y lleva tu productividad al siguiente nivel.</p>
-          <p>Descárgate la app de móvil para usuarios y la de escritorio como administrador.</p>
-          <div class="download-and-login">
-            <div class="download-buttons">
-              <a href="#" class="btn btn-primary btn-large">
-                <i class="fas fa-mobile-alt" aria-hidden="true"></i> Móvil
-              </a>
-            </div>
-            <div class="desktop-login">
-              <form action="/login" method="post">
-                <div class="form-group">
-                  <label for="username">Usuario</label>
-                  <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+            <h2>¿Listo para potenciar tu productividad?</h2>
+            <p>Accede a AppMaster desde cualquier dispositivo y lleva tu eficiencia al siguiente nivel.</p>
+            
+            <div class="download-container">
+                <div class="download-tabs">
+                    <div class="download-tab mobile-tab active" onclick="switchTab('mobile')">
+                        <i class="fas fa-mobile-alt"></i> Móvil
+                    </div>
+                    <div class="download-tab desktop-tab" onclick="switchTab('desktop')">
+                        <i class="fas fa-desktop"></i> Escritorio
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label for="password">Contraseña</label>
-                  <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                
+                <div class="download-content">
+                    <!-- Móvil download button -->
+                    <div class="mobile-download active" id="mobile-content">
+                        <a href="#" class="btn">
+                            <i class="fas fa-download"></i> Descargar GymRace
+                        </a>
+                        <p class="mt-3">Disponible para Android</p>
+                    </div>
+                    
+                    <!-- Desktop login form -->
+                    <div class="desktop-login" id="desktop-content">
+                        <form action="/login" method="post">
+                            <div class="form-group">
+                                <label for="username">Usuario</label>
+                                <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Contraseña</label>
+                                <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+                            </div>
+                            <button type="submit">
+                                <i class="fas fa-sign-in-alt"></i> Descargar GymRace Administradores
+                            </button>
+                        </form>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-large">
-                  <i class="fas fa-desktop" aria-hidden="true"></i> Escritorio
-                </button>
-              </form>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
       
     
 
@@ -264,21 +280,22 @@
             <h2 class="section-title">Funcionalidades avanzadas</h2>
             <div class="features-advanced-grid">
                 <div class="feature-block">
-                    <h3><i class="fas fa-robot"></i> Automatización inteligente</h3>
-                    <p>Crea flujos de trabajo automatizados con nuestro motor de reglas que aprende de tus hábitos. Define condiciones personalizadas y acciones para tareas repetitivas.</p>
+                    <h3><i class="fas fa-dumbbell"></i> Entrenamientos Personalizados</h3>
+                    <p>Recibe rutinas de ejercicio adaptadas a tus metas y nivel de habilidad. Con GymRace, cada entrenamiento se ajusta para ofrecerte el desafío perfecto.</p>
                 </div>
                 <div class="feature-block">
                     <h3><i class="fas fa-chart-line"></i> Análisis predictivo</h3>
                     <p>Aprovecha algoritmos avanzados para predecir tendencias y comportamientos basados en tus datos históricos. Toma decisiones informadas con visualizaciones claras.</p>
                 </div>
                 <div class="feature-block">
-                    <h3><i class="fas fa-language"></i> Procesamiento de lenguaje natural</h3>
-                    <p>Interactúa con la aplicación mediante comandos de voz o texto en lenguaje natural. Extrae datos importantes de documentos complejos automáticamente.</p>
+                    <h3><i class="fas fa-users"></i> Comunidad y Retos Sociales</h3>
+                    <p>Únete a retos de fitness con amigos o usuarios de GymRace. Compite, motívate y comparte tu progreso con una comunidad activa que te apoya.</p>
                 </div>
                 <div class="feature-block">
-                    <h3><i class="fas fa-brain"></i> Recomendaciones personalizadas</h3>
-                    <p>Recibe sugerencias adaptadas a tus necesidades específicas. Nuestro sistema aprende de tus preferencias para ofrecerte la información más relevante.</p>
+                    <h3><i class="fas fa-heartbeat"></i> Planes Nutricionales Personalizados</h3>
+                    <p>Obtén recomendaciones de dietas adaptadas a tu metabolismo, objetivos y nivel de actividad. GymRace analiza tu progreso para ajustar tu alimentación de manera inteligente.</p>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -336,7 +353,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>Gym<span>Race</span></h3>
+                    <a href="#inicio"><h3>Gym<span>Race</span></h3></a>
                     <p>Tu compañero ideal para entrenamientos inteligentes.</p>
                 </div>
                 <div class="footer-links">
@@ -380,24 +397,41 @@
     
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Menú móvil
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('nav');
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     // Menú móvil
+        //     const menuToggle = document.querySelector('.menu-toggle');
+        //     const nav = document.querySelector('nav');
             
-            menuToggle.addEventListener('click', function() {
-                nav.classList.toggle('active');
-            });
+        //     menuToggle.addEventListener('click', function() {
+        //         nav.classList.toggle('active');
+        //     });
             
-            // Botones de descarga (no funcionales como solicitaste)
-            const downloadButtons = document.querySelectorAll('.btn-primary');
-            downloadButtons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Botón de descarga clickeado - No funcional por diseño');
-                });
-            });
-        });
+        //     // Botones de descarga (no funcionales como solicitaste)
+        //     const downloadButtons = document.querySelectorAll('.btn-primary');
+        //     downloadButtons.forEach(button => {
+        //         button.addEventListener('click', function(e) {
+        //             e.preventDefault();
+        //             console.log('Botón de descarga clickeado - No funcional por diseño');
+        //         });
+        //     });
+        // });
+
+            function switchTab(tab) {
+        // Remove active class from all tabs and content
+        document.querySelector('.mobile-tab').classList.remove('active');
+        document.querySelector('.desktop-tab').classList.remove('active');
+        document.getElementById('mobile-content').classList.remove('active');
+        document.getElementById('desktop-content').classList.remove('active');
+        
+        // Add active class to selected tab and content
+        if (tab === 'mobile') {
+            document.querySelector('.mobile-tab').classList.add('active');
+            document.getElementById('mobile-content').classList.add('active');
+        } else {
+            document.querySelector('.desktop-tab').classList.add('active');
+            document.getElementById('desktop-content').classList.add('active');
+        }
+    }
     </script>
 </body>
 </html>
