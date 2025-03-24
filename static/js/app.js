@@ -1,5 +1,3 @@
-// static/js/script.js
-
 document.addEventListener('DOMContentLoaded', function() {
     // Funcionalidad para las preguntas frecuentes
     const faqItems = document.querySelectorAll('.faq-item');
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Animación de elementos al hacer scroll
+    // Animación de elementos al hacer scroll - NUEVO EFECTO: escala y rotación
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.feature-card, .testimonial, .feature-detailed, .spec-item, .gallery-item, .info-item');
         
@@ -32,17 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
             // Si el elemento está en el viewport
             if (position.top < window.innerHeight - 100) {
                 element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
+                element.style.transform = 'scale(1) rotate(0)';
             }
         });
     };
     
-    // Inicializar elementos con opacidad reducida
+    // Inicializar elementos con opacidad reducida, escala y rotación
     const elementsToAnimate = document.querySelectorAll('.feature-card, .testimonial, .feature-detailed, .spec-item, .gallery-item, .info-item');
     
     elementsToAnimate.forEach(element => {
         element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
+        element.style.transform = 'scale(0.8) rotate(-5deg)';
         element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
     

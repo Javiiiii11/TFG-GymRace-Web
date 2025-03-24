@@ -27,7 +27,10 @@ body {
     color: var(--text-color);
     background-color: var(--white);
 }
-
+.parallax {
+    will-change: transform;
+  }
+  
 .container {
     width: 90%;
     max-width: 1200px;
