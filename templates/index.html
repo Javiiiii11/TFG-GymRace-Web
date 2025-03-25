@@ -246,17 +246,19 @@
                 </div>
                 
                 <div class="download-content">
-                    <!-- Móvil download button -->
+                    <!-- Móvil download buttons -->
                     <div class="mobile-download active" id="mobile-content">
-                        <a href="#" class="btn">
-                            <i class="fas fa-download"></i> Descargar GymRace
-                        </a>
+                        <div class="download-buttons">
+                            <a href="/download/app" class="btn me-2">
+                                <i class="fas fa-download"></i> Descargar GymRace
+                            </a>
+                        </div>
                         <p class="mt-3">Disponible para Android</p>
                     </div>
                     
                     <!-- Desktop login form -->
                     <div class="desktop-login" id="desktop-content">
-                        <form action="/login" method="post">
+                        <form action="/downloadAdmin" method="post">
                             <div class="form-group">
                                 <label for="username">Usuario</label>
                                 <input type="text" id="username" name="username" placeholder="Ingresa tu usuario" required>

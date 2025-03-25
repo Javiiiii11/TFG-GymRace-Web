@@ -172,6 +172,7 @@ header {
     color: var(--primary-color);
 }
 
+
 nav ul {
     display: flex;
 }
@@ -185,7 +186,6 @@ nav ul li a {
     font-weight: 500;
     position: relative;
 }
-
 nav ul li a:hover {
     color: var(--primary-color);
 }
