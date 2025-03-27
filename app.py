@@ -23,6 +23,11 @@ ADMIN_FILE_PATH = os.path.join(BASE_DIR, 'admin_files', 'gymrace_admin.txt')
 def home():
     return render_template('index.html')
 
+@app.route('/politica')
+def politica():
+    return render_template('politica.html')
+
+
 @app.route('/acercaDe')
 def acerca_de():
     return render_template('acercaDe.html')
@@ -58,6 +63,11 @@ def download_app():
 
 @app.route('/downloadAdmin', methods=['GET', 'POST'])
 def login():
+        # Verificar si la solicitud viene de tu sitio web
+    referer = request.headers.get('Referer', '')
+    if not referer.startswith(request.host_url):
+        flash('Acceso denegado', 'error')
+        return redirect(url_for('home'))
     if request.method == 'POST':
         # Obtener credenciales del formulario
         username = request.form.get('username')

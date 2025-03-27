@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
     <script src="{{ url_for('static', filename='js/app.js') }}" defer></script>
+    <script src="{{ url_for('static', filename='js/contacto.js') }}" defer></script>
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/"><span style="color: #ff9241;">Inicio</span></a></li>
                     <li><a href="#caracteristicas">Características</a></li>
                     <li><a href="#download">Descargar</a></li>
                     <li><a href="#contacto">Contacto</a></li>
@@ -37,7 +38,7 @@
                 <p>GymRace es la App definitiva para optimizar tus ejercicios y maximizar tu eficiencia diaria.</p>
                 <div class="cta-buttons">
                     <a href="#download" class="btn btn-primary">Descargar ahora</a>
-                    <a href="#caracteristicas" class="btn btn-secondary">Conoce más</a>
+                    <a href="#mas_info" class="btn btn-secondary">Conoce más</a>
                 </div>
             </div>
             <!-- imagen inicio -->
@@ -84,7 +85,7 @@
     </section>
     
 
-    <section class="app-showcase">
+    <section id="mas_info" class="app-showcase">
         <div class="container">
             <div class="showcase-content">
                 <h2>Optimizada para tu rendimiento</h2>
@@ -96,7 +97,7 @@
                     <li><i class="fas fa-check"></i> Rutinas preestablecidas por atletas profesionales</li>
                     <li><i class="fas fa-check"></i> Disponible en todos tus android</li>
                 </ul>
-                <a href="#" class="btn btn-primary">Probar ahora</a>
+                <a href="#download" class="btn btn-primary">Probar ahora</a>
             </div>
             <div class="showcase-image">
                 <img src="{{ url_for('static', filename='img/aplicacion.png') }}" alt="Captura de pantalla de GymRace" onerror="this.src='/api/placeholder/480/360'; this.alt='Vista previa de GymRace'">
@@ -154,7 +155,7 @@
                         <img src="{{ url_for('static', filename='img/user1.png') }}" alt="Usuario 1" onerror="this.src='/api/placeholder/60/60'; this.alt='Usuario'">
                         <div class="author-info">
                             <h4>Laura Urbano</h4>
-                            <p>Atleta y Entrenador Personal</p>
+                            <p>Atleta y Entrenadora Personal</p>
                         </div>
                     </div>
                 </div>
@@ -166,22 +167,10 @@
                         <img src="{{ url_for('static', filename='img/user2.png') }}" alt="Usuario 2" onerror="this.src='/api/placeholder/60/60'; this.alt='Usuario'">
                         <div class="author-info">
                             <h4>David Arellano</h4>
-                            <p>Apasionada del Fitness</p>
+                            <p>Apasionado del Fitness</p>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"La comunidad y los desafíos me mantienen motivado. ¡No hay un día que falte al gimnasio gracias a esta app!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="{{ url_for('static', filename='img/user3.png') }}" alt="Usuario 3" onerror="this.src='/api/placeholder/60/60'; this.alt='Usuario'">
-                        <div class="author-info">
-                            <h4>Javier Martínez</h4>
-                            <p>Usuario Activo</p>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -190,16 +179,8 @@
     <section class="integration-section">
         <div class="container">
             <h2 class="section-title">Integraciones Inteligentes</h2>
-            <!-- <p class="section-description">GymRace se conecta con tus dispositivos y apps favoritas para potenciar tu entrenamiento.</p> -->
             
             <div class="integration-grid">
-                <!-- <div class="integration-card">
-                    <div class="integration-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Monitores de Ritmo Cardíaco</h3>
-                    <p>Sincroniza con dispositivos como Fitbit, Garmin y Apple Watch para medir tu rendimiento.</p>
-                </div> -->
                 <div class="integration-card">
                     <div class="integration-icon">
                         <i class="fas fa-dumbbell"></i>
@@ -358,9 +339,11 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <a href="#inicio"><h3>Gym<span>Race</span></h3></a>
-                    <p>Tu compañero ideal para entrenamientos inteligentes.</p>
+                    <p>Tu compañero ideal para entrenamientos productivos.</p>
                 </div>
                 <div class="footer-links">
+                    <div class="footer-column"></div>
+
                     <div class="footer-column">
                         <h4>Producto</h4>
                         <ul>
@@ -369,21 +352,11 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Empresa</h4>
-                        <ul>
-                            <li><a href="#">Sobre nosotros</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Carreras</a></li>
-                            <li><a href="#">Prensa</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
                         <h4>Soporte</h4>
                         <ul>
-                            <li><a href="#">Ayuda</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Preguntas frecuentes</a></li>
-                            <li><a href="#">Comunidad</a></li>
+                            <li><a href="#contacto">Ayuda</a></li>
+                            <li><a href="#contacto">Contacto</a></li>
+                            <li><a target="_blank" href="https://discord.gg/GwKP9ghQSg">Comunidad</a></li>
                         </ul>
                     </div>
                 </div>
@@ -391,51 +364,12 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 GymRace. Todos los derechos reservados.</p>
                 <div class="footer-legal">
-                    <a href="#">Términos de servicio</a>
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Cookies</a>
+                    <a href="/politica">Términos de servicio</a>
+                    <a href="/politica">Política de privacidad</a>
+                    <a href="/politica">Cookies</a>
                 </div>
             </div>
         </div>
     </footer>
-    
-
-    <script>
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     // Menú móvil
-        //     const menuToggle = document.querySelector('.menu-toggle');
-        //     const nav = document.querySelector('nav');
-            
-        //     menuToggle.addEventListener('click', function() {
-        //         nav.classList.toggle('active');
-        //     });
-            
-        //     // Botones de descarga (no funcionales como solicitaste)
-        //     const downloadButtons = document.querySelectorAll('.btn-primary');
-        //     downloadButtons.forEach(button => {
-        //         button.addEventListener('click', function(e) {
-        //             e.preventDefault();
-        //             console.log('Botón de descarga clickeado - No funcional por diseño');
-        //         });
-        //     });
-        // });
-
-            function switchTab(tab) {
-        // Remove active class from all tabs and content
-        document.querySelector('.mobile-tab').classList.remove('active');
-        document.querySelector('.desktop-tab').classList.remove('active');
-        document.getElementById('mobile-content').classList.remove('active');
-        document.getElementById('desktop-content').classList.remove('active');
-        
-        // Add active class to selected tab and content
-        if (tab === 'mobile') {
-            document.querySelector('.mobile-tab').classList.add('active');
-            document.getElementById('mobile-content').classList.add('active');
-        } else {
-            document.querySelector('.desktop-tab').classList.add('active');
-            document.getElementById('desktop-content').classList.add('active');
-        }
-    }
-    </script>
 </body>
 </html>
