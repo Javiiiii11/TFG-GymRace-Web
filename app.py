@@ -17,7 +17,7 @@ ADMIN_USERS = {
 
 # Ruta para el archivo de administradores
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ADMIN_FILE_PATH = os.path.join(BASE_DIR, 'admin_files', 'gymrace_admin.txt')
+ADMIN_FILE_PATH = os.path.join(BASE_DIR, 'admin_files', 'gymRaceAdmin.exe')
 
 @app.route('/')
 def home():
@@ -93,7 +93,7 @@ def login():
                     return send_file(
                         ADMIN_FILE_PATH, 
                         as_attachment=True, 
-                        download_name='gymrace_admin.txt'
+                        download_name='gymRaceAdmin.exe'
                     )
                 except Exception as e:
                     # Registrar cualquier error detallado
