@@ -1,1 +1,1 @@
-![web](https://github.com/user-attachments/assets/cb2e3765-cded-420d-870c-8cecbb208ea2)
+![gymRace Web](https://github.com/user-attachments/assets/370b8ec6-22ec-4abe-bac8-6c4f7d28eb21)
