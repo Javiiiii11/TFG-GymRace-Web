@@ -37,8 +37,8 @@ def acerca_de():
 @app.route('/download/app', methods=['GET'])
 def download_app():
     try:
-        # Ruta para el archivo app.txt
-        APP_FILE_PATH = os.path.join(BASE_DIR, 'app_files', 'app.txt')
+        # Ruta para el archivo apk
+        APP_FILE_PATH = os.path.join(BASE_DIR, 'app_files', 'GymRace.apk')
         
         # Verificar existencia del archivo
         if not os.path.exists(APP_FILE_PATH):
@@ -51,7 +51,7 @@ def download_app():
         return send_file(
             APP_FILE_PATH, 
             as_attachment=True, 
-            download_name='app.txt'
+            download_name='GymRace.apk'
         )
     except Exception as e:
         logger.error(f"Error sending app file: {str(e)}")
