@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', function() {
         actionButtons.className = 'action-buttons';
 
         const cancelButton = document.createElement('button');
-        cancelButton.textContent = 'Cancelar';
+        cancelButton.textContent = 'Cancelar todas';
         cancelButton.className = 'cookie-btn cookie-btn-secondary';
 
         const saveButton = document.createElement('button');
