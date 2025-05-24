@@ -5,6 +5,12 @@ La **web de GymRace** es una página sencilla e intuitiva desarrollada para perm
 
 ---
 
+## 🌟 Enlace a la web publica
+
+```
+https://tfg-gymrace-web.onrender.com
+```
+
 ## 🌟 Funcionalidades
 
 - 📥 **Descarga directa del APK** de GymRace para Android.
